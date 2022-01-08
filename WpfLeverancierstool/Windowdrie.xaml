@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfLeverancierstool.Windowdrie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLeverancierstool"
+        mc:Ignorable="d"
+        Title="Windowdrie" Height="450" Width="800">
+    <Grid Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">
+        <Label Content="Leveranciersnaam" HorizontalAlignment="Left" Margin="50,102,0,0" VerticalAlignment="Top" Width="184" Height="41" FontSize="20" FontWeight="Bold"/>
+        <Label Content="IDnummer" HorizontalAlignment="Left" Margin="50,160,0,0" VerticalAlignment="Top" Width="172" Height="41" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Contractomschr" HorizontalAlignment="Left" Margin="50,219,0,0" VerticalAlignment="Top" Width="172" Height="41" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Relatienummer" HorizontalAlignment="Left" Margin="50,274,0,0" VerticalAlignment="Top" Width="172" Height="41" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="Levnaam" HorizontalAlignment="Center" Margin="0,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="30" FontSize="14" RenderTransformOrigin="0.529,1.896" />
+        <TextBox x:Name="IDnumm" HorizontalAlignment="Center" Margin="0,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="30" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
+        <TextBox x:Name="Contractom" HorizontalAlignment="Center" Margin="0,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
+        <TextBox x:Name="Relatie" HorizontalAlignment="Center" Margin="0,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="28" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
+        <Button x:Name ="Exit" Content="X" HorizontalAlignment="Left" Margin="731,29,0,0" VerticalAlignment="Top" Height="35" Width="42" FontWeight="Bold" FontSize="18" Click="Button_Click" RenderTransformOrigin="0.508,-1.383"/>
+        <Image Margin="594,274,27,34" Source="/Image/Afbeelding 2.jpg" Stretch="Fill"/>
+
+    </Grid>
+</Window>
