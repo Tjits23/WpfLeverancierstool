@@ -52,7 +52,7 @@ namespace WpfLeverancierstool
             reader.Close();
             con.Close();
 
-            ComboBox1.SelectedIndex = 0;
+            
         }
 
        
