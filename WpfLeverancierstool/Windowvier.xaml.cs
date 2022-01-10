@@ -21,7 +21,7 @@ namespace WpfLeverancierstool
     /// </summary>
     public partial class Windowvier : Window
     {
-        
+        private string leveranciersnaam;
 
         public Windowvier()
         {
@@ -32,18 +32,33 @@ namespace WpfLeverancierstool
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             string strProvider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\\Tjitsche\\Tjitsche\\Leverancierscontractenbestand.xlsx.accdb'";
             OleDbConnection con = new OleDbConnection(strProvider);
 
             OleDbCommand command = new OleDbCommand();
+            command.CommandText = "Select COUNT(Leveranciersnaam) FROM Leveranciersgegevens WHERE Leveranciersnaam = '" + leveranciersnaam + "'"; 
+            command.Connection = con;
+           
+            con.Open();
+            var count = (int)command.ExecuteScalar();
+            if (count>0)
+            {
+                MessageBox.Show("Leverancier bestaat reeds in de database");return;
+            }
+            
+            con.Close();
+            
+
+            
             command.Connection = con;
             command.CommandText = $"insert into Leveranciersgegevens ([Leveranciersnaam],[Contactpersoon],[Telefoonnummer]) values ('" + TextinvoegLev.Text + "', '" + TextinvoegContp.Text + "', '" + TextinvoegTel.Text + "')";
-            //con.Open();
             OleDbDataReader dr;
             try
             {
                 con.Open();
                 dr = command.ExecuteReader();
+                
                
                 while (dr.Read())
                 {
@@ -53,22 +68,21 @@ namespace WpfLeverancierstool
                     TextinvoegContp.Text = toString;
                     string toString2 = (string)((dr["Text"]));
                     TextinvoegTel.Text = toString;
-
-                    
                 }
+                
 
                 con.Close();
-                //MessageBox.Show("leverancier is toegevoegd");
+                //MessageBox.Show("Leverancier is toegevoegd");
             }
-            catch (Exception ex)
-            { Console.WriteLine(ex.ToString()); }
+           catch (Exception ex)
+           { Console.WriteLine(ex.ToString()); }
 
-                             
+
             OleDbCommand cmd = new OleDbCommand();
             command.Connection = con;
-            command.CommandText = $"insert into Contracten ([IDnummer], [Leveranciersnaam],[Contractoms], [Relatienummer]) values ('" + TextinvoegContractID.Text + "', '" + TextinvoegLev.Text + "', '" + TextinvoegContractoms.Text + "', '" + TextinvoegRelatienr.Text + "')";
+            command.CommandText = $"insert into Contracten ([IDnummer],[Leveranciersnaam],[Contractoms], [Relatienummer]) values ('" + TextinvoegContractID.Text + "', '" + TextinvoegLev.Text + "', '" + TextinvoegContractoms.Text + "', '" + TextinvoegRelatienr.Text + "')";
             // "'" + TextinvoegContractID.Text + "', '" + TextinvoegRelatienr.Text + "')";
-            
+
             try
             {
                 con.Open();
@@ -80,7 +94,7 @@ namespace WpfLeverancierstool
                     TextinvoegContractID.Text = toString;
                     string toString3 = (string)(dr["Text"]);
                     TextinvoegContractoms.Text = toString;
-                    string toString4 = (string)((dr["Text"]));
+                    string toString4 = (string)(((dr["Text"])));
                     TextinvoegRelatienr.Text = toString;
 
                 }
@@ -88,12 +102,13 @@ namespace WpfLeverancierstool
                 MessageBox.Show("leverancier is toegevoegd");
             }
             catch (Exception ex)
-            { Console.WriteLine(ex.ToString()); } 
-            
-            
-            
+            { Console.WriteLine(ex.ToString()); }
+
+
+
         }
 
+        
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();

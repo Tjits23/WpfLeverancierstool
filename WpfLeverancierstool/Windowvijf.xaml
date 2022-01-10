@@ -12,19 +12,15 @@
             <Label Content="Contactpersoon" HorizontalAlignment="Left" Margin="50,145,0,0" VerticalAlignment="Top" Width="172" Height="41" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.524,1.2"/>
             <Label Content="Telefoonnummer" HorizontalAlignment="Left" Margin="50,203,0,0" VerticalAlignment="Top" Width="172" Height="41" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.488,-0.063"/>
             <Label Content="Contractomschr" HorizontalAlignment="Left" Margin="50,256,0,0" VerticalAlignment="Top" Width="172" Height="40" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.51,0.276"/>
-            <Label Content="IDNummer" HorizontalAlignment="Left" Margin="50,307,0,0" VerticalAlignment="Top" Width="172" Height="40" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.531,2.265"/>
-            <Label Content="Relatienummer" HorizontalAlignment="Left" Margin="50,352,0,0" VerticalAlignment="Top" Width="172" Height="40" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.503,2.111"/>
-            <Label x:Name="Levnaam" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" Width="236" Height="30" FontSize="14" RenderTransformOrigin="0.529,1.896" />
             <TextBox x:Name="Contpnaam" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="30" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
-            <TextBox x:Name="Telnaam" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
+            <TextBox x:Name="Telnaam" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.529,1.896" MaxLength="16"/>
             <TextBox x:Name="Contromsnaam" HorizontalAlignment="Center" Margin="0,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="28" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
-            <Label x:Name="IDnum" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Width="236" Height="28" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
-            <Label x:Name="Relatienum" HorizontalAlignment="Center" Margin="0,358,0,0" VerticalAlignment="Top" Width="236" Height="28" FontSize="14" RenderTransformOrigin="0.529,1.896"/>
             <Image Margin="595,238,26,48" Source="/Image/Afbeelding 2.jpg" Stretch="Fill"/>
             <Button x:Name="Exit" Content="X" HorizontalAlignment="Left" Margin="739,21,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="35" Click="Exit_Click"/>
+            <Label x:Name="Levnaam" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" Width="236" Height="32" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
 
         </Grid>
-        <Button Content="Opslaan" HorizontalAlignment="Left" Margin="661,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.419,-4.122" Width="112" Height="32" FontWeight="Bold" Click="Button_Click"/>
+         <Button Content="Opslaan" HorizontalAlignment="Center" Margin="0,349,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.419,-4.122" Width="112" Height="32" FontWeight="Bold" Click="Button_Click"/>
 
     </Grid>
 </Window>

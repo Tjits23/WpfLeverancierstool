@@ -55,7 +55,7 @@ namespace WpfLeverancierstool
             {
                 using (OleDbCommand command = con.CreateCommand())
                 {
-                    command.CommandText = "UPDATE Contracten Set Contractoms='" + Contromsnaam.Text + "', Relatienummer = '" + Relatienum.Content + "'WHERE Leveranciersnaam = '" + leveranciersNaam + "'";
+                    command.CommandText = "UPDATE Contracten Set Contractoms='" + Contromsnaam.Text + "' WHERE Leveranciersnaam = '" + leveranciersNaam + "'";
                     command.Connection = con;
                     con.Open();
                     var reader = command.ExecuteReader();
