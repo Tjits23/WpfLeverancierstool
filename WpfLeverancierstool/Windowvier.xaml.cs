@@ -37,7 +37,7 @@ namespace WpfLeverancierstool
             OleDbConnection con = new OleDbConnection(strProvider);
 
             OleDbCommand command = new OleDbCommand();
-            command.CommandText = "Select COUNT(Leveranciersnaam) FROM Leveranciersgegevens WHERE Leveranciersnaam = '" + leveranciersnaam + "'"; 
+            command.CommandText = "Select COUNT(Leveranciersnaam) FROM Leveranciersgegevens WHERE Leveranciersnaam = '" + TextinvoegLev.Text + "'"; 
             command.Connection = con;
            
             con.Open();
@@ -49,8 +49,7 @@ namespace WpfLeverancierstool
             
             con.Close();
             
-
-            
+                        
             command.Connection = con;
             command.CommandText = $"insert into Leveranciersgegevens ([Leveranciersnaam],[Contactpersoon],[Telefoonnummer]) values ('" + TextinvoegLev.Text + "', '" + TextinvoegContp.Text + "', '" + TextinvoegTel.Text + "')";
             OleDbDataReader dr;
