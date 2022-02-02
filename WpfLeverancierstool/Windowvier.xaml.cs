@@ -71,7 +71,7 @@ namespace WpfLeverancierstool
                 
 
                 con.Close();
-                //MessageBox.Show("Leverancier is toegevoegd");
+                
             }
            catch (Exception ex)
            { Console.WriteLine(ex.ToString()); }
@@ -80,7 +80,7 @@ namespace WpfLeverancierstool
             OleDbCommand cmd = new OleDbCommand();
             command.Connection = con;
             command.CommandText = $"insert into Contracten ([IDnummer],[Leveranciersnaam],[Contractoms], [Relatienummer]) values ('" + TextinvoegContractID.Text + "', '" + TextinvoegLev.Text + "', '" + TextinvoegContractoms.Text + "', '" + TextinvoegRelatienr.Text + "')";
-            // "'" + TextinvoegContractID.Text + "', '" + TextinvoegRelatienr.Text + "')";
+            
 
             try
             {
@@ -119,23 +119,7 @@ namespace WpfLeverancierstool
 
 
 
-        //con.Open();
-        //command.ExecuteNonQuery();
-        //MessageBox.Show("Relatie is toegevoegd");
-        //con.Close();
-
-        //while (reader.Read())
-        //{
-        // string Leveranciersnaam = (string)reader.GetValue("Leveranciersnaam");
-        //Textinvoeglev.Text = Leveranciersnaam;
-
-        //string Contactpersoon = (string)reader.GetValue("Contactpersoon");
-        // Textinvoegcontp.Text = Contactpersoon;
-
-        // string Telefoon = (string)reader.GetValue("Telefoon");
-        //Textinvoegtel.Text = Telefoon;
-        //}
-        //reader.Close();
+        
     }
 
     

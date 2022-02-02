@@ -113,59 +113,5 @@ namespace WpfLeverancierstool
 
 
 
-        //private void AddTextboxtext2(string Contactpersoon)
-        //{
-        //    string strProvider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\\Tjitsche\\Tjitsche\\Leverancierscontractenbestand.xlsx.accdb'";
-        //    OleDbConnection con = new OleDbConnection(strProvider);
-
-        //    OleDbCommand command = new OleDbCommand();
-        //    command.CommandText = "Select Contactpersoon FROM Leveranciersgegevens WHERE Leveranciersnaam = '" + Contactpersoon + "'";
-        //    command.Connection = con;
-
-        //    con.Open();
-        //    var reader = command.ExecuteReader();
-
-        //    while (reader.Read())
-        //    {
-        //        string contactpersoon = (string)reader.GetValue("Contactpersoon");
-        //        TextContp.Text = Contactpersoon;
-        //    }
-        //    reader.Close();
-        //    con.Close();
-
-        //}
-
-        //private void Contactpersoon_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    string contactpersoon = (string)TextContp.Text;
-        //}
-
-        //private void AddTextboxtext3(string Telefoonnummer)
-        //{
-        //    string strProvider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\\Tjitsche\\Tjitsche\\Leverancierscontractenbestand.xlsx.accdb'";
-        //    OleDbConnection con = new OleDbConnection(strProvider);
-
-        //    OleDbCommand command = new OleDbCommand();
-        //    command.CommandText = "Select Telefoonnummer FROM Leveranciersgegevens WHERE Leverancier = '" + Telefoonnummer + "'";
-        //    command.Connection = con;
-
-        //    con.Open();
-        //    var reader = command.ExecuteReader();
-
-        //    while (reader.Read())
-        //    {
-        //        string contactpersoon = (string)reader.GetValue("Telefoonnummer");
-        //        TextTel.Text = Telefoonnummer;
-        //    }
-        //    reader.Close();
-        //    con.Close();
-
-
-        //}
-
-        //private void TextTel_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    string Telefoonnummer = (string)TextTel.Text;
-        //}
     }
 }

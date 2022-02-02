@@ -32,7 +32,7 @@ namespace WpfLeverancierstool
 
         }
 
-              private void AddComboBox(string leveranciersnaam)
+            private void AddComboBox(string Leveranciersnaam)
         {
             string strProvider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\\Tjitsche\\Tjitsche\\Leverancierscontractenbestand.xlsx.accdb'";
             OleDbConnection con = new OleDbConnection(strProvider);
@@ -47,9 +47,12 @@ namespace WpfLeverancierstool
             while (reader.Read())
             {
                 string leveranciersNaam = (string)reader.GetValue("Leveranciersnaam");
-                ComboBox1.Items.Add(leveranciersNaam);
+               // ComboBox1.Items.Add(leveranciersNaam);
+
+               // ComboBox1.SelectedIndex = 0;
+                
             }
-            reader.Close();
+            reader.Close(); 
             con.Close();
 
             
@@ -62,9 +65,9 @@ namespace WpfLeverancierstool
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         { 
-            string leveranciersnaam = (string)ComboBox1.SelectedItem;
+            string Leveranciersnaam = (string)ComboBox1.SelectedItem;
 
-            Windowtwee windowtwee = new Windowtwee(leveranciersnaam);
+            Windowtwee windowtwee = new Windowtwee(Leveranciersnaam);
             windowtwee.Visibility = Visibility.Visible;
             
         }
@@ -77,7 +80,15 @@ namespace WpfLeverancierstool
             Windowvier windowvier = new Windowvier();
             windowvier.Visibility = Visibility.Visible;
         }
-        
+
+        private void VerwButton_Click(object sender, RoutedEventArgs e)
+        {
+            string leveranciersnaam = (string)ComboBox1.SelectedItem.ToString();
+
+            Windowzes windowzes = new Windowzes(leveranciersnaam);
+            windowzes.Visibility = Visibility.Visible;
+            //windowzes.Show();
+        }
     }
 
 }
