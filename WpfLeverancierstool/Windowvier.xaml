@@ -15,11 +15,11 @@
         <Label Content="Relatienummer" HorizontalAlignment="Left" Margin="50,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.563,4.751" Width="172" FontWeight="Bold" FontSize="18"/>
         <TextBox x:Name="TextinvoegLev" HorizontalAlignment="Center" Margin="0,68,0,0" VerticalAlignment="Top" Width="237" Height="29" FontSize="14" RenderTransformOrigin="0.535,2.277" MaxLength="25"/>
         <TextBox x:Name="TextinvoegContp" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" MaxLength="25"/>
-        <TextBox x:Name="TextinvoegTel" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="11"/>
+        <TextBox x:Name="TextinvoegTel" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="11" TextChanged="TextinvoegTel_TextChanged" />
         <Button Content="Opslaan" HorizontalAlignment="Left" Margin="653,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.419,-4.122" Width="112" Height="32" FontWeight="Bold" Click="Button_Click"/>
         <TextBox x:Name="TextinvoegContractoms" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="25"/>
-        <TextBox x:Name="TextinvoegContractID" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="3"/>
-        <TextBox x:Name="TextinvoegRelatienr" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="5"/>
+        <TextBox x:Name="TextinvoegContractID" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="3" TextChanged="TextinvoegContractID_TextChanged"/>
+        <TextBox x:Name="TextinvoegRelatienr" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="14" RenderTransformOrigin="0.519,1.139" MaxLength="5" TextChanged="TextinvoegRelatienr_TextChanged"/>
         <Button x:Name="Exit" Content="X" HorizontalAlignment="Left" Margin="725,25,0,0" VerticalAlignment="Top" Height="32" RenderTransformOrigin="0.148,0.588" FontWeight="Bold" FontSize="18" Width="40" Click="Exit_Click"/>
         <Image Margin="611,239,10,47" Source="/Image/Afbeelding 2.jpg" Stretch="Fill"/>
 

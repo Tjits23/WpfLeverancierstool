@@ -15,9 +15,8 @@
         <TextBox x:Name="TextContp" HorizontalAlignment="Center" Margin="0,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="29" FontSize="14"/>
         <TextBox x:Name="TextTel" HorizontalAlignment="Center" Margin="0,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237" Height="29" />
         <TextBox x:Name="TextContractoms" HorizontalAlignment="Center" Margin="0,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237" Height="29"/>
-        <Button x:Name="Wijz" HorizontalAlignment="Left" Margin="50,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.325,0.2" Width="126" Height="35" AutomationProperties.Name="Wijzigen" FontSize="14" FontWeight="Bold" Content="Wijzigen" Click="Wijz_Click"/>
-        <Button x:Name="Verw" Content="Verwijderen" HorizontalAlignment="Left" Margin="228,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.325,0.2" Width="126" Height="35" AutomationProperties.Name="Verwijderen" FontSize="14" FontWeight="Bold" Click="Verw_Click"/>
-        <Button x:Name="Extra" Content="Meer info" HorizontalAlignment="Left" Margin="393,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.325,0.2" Width="125" Height="35" AutomationProperties.Name="Meer info" FontSize="14" FontWeight="Bold" Click="Extra_Click"/>
+        <Button x:Name="Wijz" HorizontalAlignment="Left" Margin="242,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.325,0.2" Width="126" Height="35" AutomationProperties.Name="Wijzigen" FontSize="14" FontWeight="Bold" Content="Wijzigen" Click="Wijz_Click"/>
+        <Button x:Name="Extra" Content="Meer info" HorizontalAlignment="Left" Margin="432,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.325,0.2" Width="125" Height="35" AutomationProperties.Name="Meer info" FontSize="14" FontWeight="Bold" Click="Extra_Click"/>
         <Image Margin="604,234,21,55" Source="/Image/Afbeelding 2.jpg" Stretch="Fill"/>
         <Button x:Name="Exit" Content="X" HorizontalAlignment="Left" Margin="746,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="33" Click="Exit_Click" RenderTransformOrigin="0.405,-3.081"/>
 

@@ -32,13 +32,13 @@ namespace WpfLeverancierstool
 
         }
 
-            private void AddComboBox(string Leveranciersnaam)
+        private void AddComboBox(string Leveranciersnaam)
         {
             string strProvider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\\Tjitsche\\Tjitsche\\Leverancierscontractenbestand.xlsx.accdb'";
             OleDbConnection con = new OleDbConnection(strProvider);
 
             OleDbCommand command = new OleDbCommand();
-            command.CommandText = $"Select * from Leveranciersgegevens";
+            command.CommandText = $"Select * from Leveranciersgegevens ORDER BY Leveranciersnaam";
             command.Connection = con;
 
             con.Open();
@@ -47,9 +47,9 @@ namespace WpfLeverancierstool
             while (reader.Read())
             {
                 string leveranciersNaam = (string)reader.GetValue("Leveranciersnaam");
-               // ComboBox1.Items.Add(leveranciersNaam);
+                ComboBox1.Items.Add(leveranciersNaam);
 
-               // ComboBox1.SelectedIndex = 0;
+               
                 
             }
             reader.Close(); 
@@ -91,6 +91,9 @@ namespace WpfLeverancierstool
         }
     }
 
+    internal class leveranciersnaam
+    {
+    }
 }
 
 

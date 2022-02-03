@@ -97,15 +97,7 @@ namespace WpfLeverancierstool
             
         }
 
-        private void Verw_Click(object sender, RoutedEventArgs e)
-        {
-            string leveranciersnaam =(string)TextLev.Text ;
-
-            Windowzes windowzes = new Windowzes(leveranciersnaam);
-            windowzes.Visibility = Visibility.Visible;
-            windowzes.Show();
-        }
-
+        
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
