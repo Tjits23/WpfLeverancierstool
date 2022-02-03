@@ -43,7 +43,7 @@ namespace WpfLeverancierstool
 
             con.Open();
             var reader = command.ExecuteReader();
-
+            
             while (reader.Read())
             {
                 string leveranciersNaam = (string)reader.GetValue("Leveranciersnaam");
@@ -52,10 +52,13 @@ namespace WpfLeverancierstool
                
                 
             }
-            reader.Close(); 
-            con.Close();
 
             
+            //ComboBox1.SelectedIndex = -1;
+            reader.Close(); 
+            con.Close();
+            ComboBox1.SelectedValue = 0;
+
         }
 
        
@@ -66,7 +69,8 @@ namespace WpfLeverancierstool
         private void submitButton_Click(object sender, RoutedEventArgs e)
         { 
             string Leveranciersnaam = (string)ComboBox1.SelectedItem;
-
+            //string strProvider = (string)ComboBox1.SelectedItem;
+            //ComboBox1.SelectedIndex = 1;
             Windowtwee windowtwee = new Windowtwee(Leveranciersnaam);
             windowtwee.Visibility = Visibility.Visible;
             
