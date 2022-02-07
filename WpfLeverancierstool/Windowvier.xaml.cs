@@ -39,9 +39,33 @@ namespace WpfLeverancierstool
             OleDbCommand command = new OleDbCommand();
             command.CommandText = "Select COUNT(Leveranciersnaam) FROM Leveranciersgegevens WHERE Leveranciersnaam = '" + TextinvoegLev.Text + "'";
             command.Connection = con;
-
+            if (string.IsNullOrEmpty(TextinvoegTel.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
+            if (string.IsNullOrEmpty(TextinvoegContp.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
+            if (string.IsNullOrEmpty(TextinvoegLev.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
+            if (string.IsNullOrEmpty(TextinvoegContractID.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
+            if (string.IsNullOrEmpty(TextinvoegContractoms.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
+            if (string.IsNullOrEmpty(TextinvoegRelatienr.Text))
+            {
+                MessageBox.Show("Tekstveld is leeg");return;
+            }
             con.Open();
             var count = (int)command.ExecuteScalar();
+
             if (count > 0)
             {
                 MessageBox.Show("Leverancier bestaat reeds in de database"); return;
@@ -60,6 +84,7 @@ namespace WpfLeverancierstool
 
 
                 while (dr.Read())
+
                 {
                     string toString = (string)dr["Text"];
                     TextinvoegLev.Text = toString;
@@ -89,6 +114,7 @@ namespace WpfLeverancierstool
 
                 while (dr.Read())
                 {
+                    
                     string toString = (string)dr["Text"];
                     TextinvoegContractID.Text = toString;
                     string toString3 = (string)(dr["Text"]);
@@ -96,9 +122,13 @@ namespace WpfLeverancierstool
                     string toString4 = (string)(((dr["Text"])));
                     TextinvoegRelatienr.Text = toString;
 
+                    
                 }
                 con.Close();
                 MessageBox.Show("leverancier is toegevoegd");
+
+
+                
             }
             catch (Exception ex)
             { Console.WriteLine(ex.ToString()); }
@@ -120,6 +150,14 @@ namespace WpfLeverancierstool
                 MessageBox.Show("Graag alleen cijfers invoeren");
                 TextinvoegTel.Text = TextinvoegTel.Text.Remove(TextinvoegTel.Text.Length - 1);
             }
+
+            
+            
+            //if(string.IsNullOrEmpty(TextinvoegTel.Text))
+            //{
+              //  MessageBox.Show("De tekstbox is leeg");
+              //  return; 
+            //}
         }
 
         private void TextinvoegContractID_TextChanged(object sender, TextChangedEventArgs e)
